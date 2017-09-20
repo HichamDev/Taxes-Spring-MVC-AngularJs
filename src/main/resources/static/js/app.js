@@ -10,10 +10,19 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:"/taxes",
 		templateUrl:"views/taxes.html",
 		controller:"TaxeController"	
+	});	
+	$stateProvider.state("newentreprise",{
+		url:"/newentreprise",
+		templateUrl:"views/newentreprise.html",
+		controller:"NewEntreprise"	
 	});		
 });
 
 app.controller("TaxeController", function(){
+	
+});
+
+app.controller("NewEntreprise", function(){
 	
 });
 
