@@ -1,0 +1,35 @@
+<div ui-view>
+
+<div class="container">
+<div class="panel panel-primary">
+	<div class="panel-heading">Liste des entreprises</div>
+	<div class="panel-body">
+	<div class="container">
+		<label>Mot Clé :</label>
+		<input type="text" ng-model="motCle">
+		<button ng-click="cherche()">Chercher</button>
+	
+	</div>
+	<table class="table table-striped">
+		<tr>
+			<th>Code</th><th>Nom</th><th>Raison Sociele</th><th>Email</th>		
+		</tr>
+		<tr ng-repeat="e in pageEntreprise.content"> 
+			<td>{{e.code}}</td>
+			<td>{{e.nom}}</td>
+			<td>{{e.raisonSociale}}</td>
+			<td>{{e.email}}</td>
+		</tr>
+	</table>
+	<div class="container">
+	<ul class="nav nav-pills">
+		<li ng-class="{'active':pageCourante==$index}" class="clickeble" ng-repeat="p in pages track by $index">
+		<a ng-click="gotopage($index)">{{$index}}</a>
+		</li>	
+	</ul>
+	
+	</div>
+	</div>
+</div>
+</div>
+</div>
